@@ -1,18 +1,36 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+	<section class="home" >
+		<SliderFull class="slider" />
+		<div class="container containerDark">
+			<h2  class="text-center mt-5">Fresh chapters</h2>
+			<List/>
+		</div>
+	</section>
 </template>
 
+<style lang="scss" scoped>
+	.home {
+		position: relative;
+		width: 100%;
+		height: 100vh;
+	}
+	.containerDark {
+		background-color: #212529;
+	}
+	.slider  {
+		margin-top: 4rem;
+	}
+</style>
+
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+
+import List from '@/components/List.vue';
+import SliderFull from '@/components/SliderFull.vue';
 
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
+	name: 'Home',
+	components: {
+		List, SliderFull
+	}
 }
 </script>

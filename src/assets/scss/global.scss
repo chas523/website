@@ -1,0 +1,8 @@
+@import "bootstrap/config";
+@import "mixins/mixin";
+@import "config/variable";
+
+body, html {
+	background-color: $backgroundColor;
+	color: $textColor; 
+}
