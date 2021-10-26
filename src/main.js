@@ -6,6 +6,7 @@ import '@/assets/scss/global.scss'
 import * as bootstrap from 'bootstrap';
 Vue.config.productionTip = false
 
+
 new Vue({
   router,
   store,

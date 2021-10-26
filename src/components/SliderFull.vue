@@ -4,7 +4,7 @@
 			<div class="swiper__wrapper">
 				<div class="swiper__img">
 					<img :src="slide.url" alt="" class="rounded">
-					<div class="swiper__likes rounded shadow p-1">&nbsp;&hearts;&nbsp;&nbsp;&nbsp;{{slide.likes}}</div>
+					<div class="swiper__likes rounded shadow p-1">&nbsp;<span>&hearts;</span>&nbsp;&nbsp;&nbsp;{{slide.likes}}</div>
 				</div>
 				<a class="swiper__title" href="#">{{slide.title}}</a>
 				<div class="swiper__tag text-secondary"> {{slide.tag}}</div>
@@ -22,6 +22,9 @@ export default {
 		Swiper,
 		SwiperSlide,
 	},
+	methods: {
+		
+	},
 	data() {
 		return {
 			swiperOption: {
@@ -34,7 +37,7 @@ export default {
 				},
 				breakpoints: {
 					1200: {
-						slidesPerView: 6,
+						slidesPerView: 7,
 					}
 				}
 			},
@@ -95,6 +98,62 @@ export default {
 					tag: "genre",
 					likes: 192,
 				},
+				{
+					id: 8,
+					alt: "The A - Z Guide Of WAR",
+					url:  require('../assets/images/slider/1.jpg'),
+					title: "Beware The ANIME Scam",
+					tag: "genre",
+					likes: 200,
+				},
+				{
+					id: 9,
+					alt: "some",
+					url:  require('../assets/images/slider/2.png'),
+					title: "The Secrets To GATE",
+					tag: "genre",
+					likes: 220,
+				},
+				{
+					id: 10,
+					alt: "GATE Adventures",
+					url:  require('../assets/images/slider/3.jpg'),
+					title: "GATE Adventures",
+					tag: "genre",
+					likes: 400,
+				},
+				{
+					id: 11,
+					alt: "Get Rid of BI For Good",
+					url:  require('../assets/images/slider/4.png'),
+					title: "Get Rid of BI For Good",
+					tag: "genre",
+					likes: 192,
+				},
+				{
+					id: 12,
+					alt: "some",
+					url:  require('../assets/images/slider/1.png'),
+					title: "The A - Z Guide Of WAR",
+					tag: "genre",
+					likes: 122,
+				},
+				{
+					id: 13,
+					alt: "some",
+					url:  require('../assets/images/slider/5.png'),
+					title: "title",
+					tag: "genre",
+					likes: 192,
+				},
+				{
+					id: 14,
+					alt: "some",
+					url:  require('../assets/images/slider/6.png'),
+					title: "title",
+					tag: "genre",
+					likes: 192,
+				},
 			],
 		};
 	},
@@ -134,7 +193,15 @@ export default {
 			left: 10px;
 			background-color: rgba(0, 0, 0, 0.63);
 			width: 70px;
-
+			cursor: pointer;
+			span {
+				transition: 0.3s all;
+			}
+			&:hover {
+				span {
+					color: red;
+				}
+			}
 		}
 
 	}

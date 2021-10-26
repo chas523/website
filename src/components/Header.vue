@@ -1,16 +1,36 @@
 <template>
 	<header class="header fixed-top">
-	<nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
   <div class="container">
-    <a class="navbar-brand" href="#">Your logo</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-		<div class="navbar-nav">
-			<router-link v-for="item in items" :key="item.id" :to="item.url" class="nav-link " exact>{{item.text}}</router-link>
-		</div>
-	</div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" v-for="item in items" :key="item.id" exact >
+        <router-link :to="item.url" class="nav-link " exact>{{item.text}}</router-link>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-secondary btn-dark" type="submit">Search</button>
+      </form>
+    </div>
   </div>
 </nav>
 	</header>
@@ -33,11 +53,6 @@ export default ({
 				},
 				{
 					id: 3,
-					text: 'Typography',
-					url: '/typography'
-				},
-				{
-					id: 4,
 					text: 'Contacts',
 					url: '/contacts'
 				}
@@ -48,6 +63,5 @@ export default ({
 </script>
 
 <style lang="scss" >
-
 </style>
 
